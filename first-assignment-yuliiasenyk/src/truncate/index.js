@@ -8,21 +8,12 @@
  * @return {string} truncated string
  */
 const truncate = (str, length = 0, replacer = '...') => {
- if (str.length > maxlength) {
-    return str.slice(0, maxlength - 3) + '...';
-    // итоговая длина равна maxlength
-  }
-
-  return str;
-
-};
-
-export default truncate;
-
-
-const truncate = (str, length = 0, replacer = '...') => {
  if (str.length > length) {
     return str.slice(0, length - replacer.length) + replacer;
   }
   return str;
 };
+
+export default truncate;
+
+
